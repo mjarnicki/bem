@@ -98,10 +98,24 @@ input:focus {
   background-color: #F6F6F6; }
   .main-header .navbar .navbar-brand {
     margin-left: 7%; }
-  .main-header .navbar .collapse .navbar-nav .nav-link {
+  .main-header .navbar .collapse .navbar-nav .nav-link,
+  .main-header .navbar .collapsing .navbar-nav .nav-link {
     padding: 25px 10px;
     margin: 0 1.2rem; }
-    .main-header .navbar .collapse .navbar-nav .nav-link:hover {
+    .main-header .navbar .collapse .navbar-nav .nav-link:hover,
+    .main-header .navbar .collapsing .navbar-nav .nav-link:hover {
       background-color: #FDEA00; }
-  .main-header .navbar .collapse .navbar-nav .nav-link__active {
+  .main-header .navbar .collapse .navbar-nav .nav-link__active,
+  .main-header .navbar .collapsing .navbar-nav .nav-link__active {
     background-color: #FDEA00; }
+
+.main-header .header-slider .header-slider__single-slide .header-slider__single-slide--background {
+  background-image: url(../img/slider-background.jpg);
+  background-position: center;
+  background-size: cover; }
+  .main-header .header-slider .header-slider__single-slide .header-slider__single-slide--background .first {
+    border: 10px solid green;
+    height: 500px; }
+  .main-header .header-slider .header-slider__single-slide .header-slider__single-slide--background .second {
+    border: 10px solid black;
+    height: 500px; }
