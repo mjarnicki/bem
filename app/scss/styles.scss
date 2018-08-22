@@ -1,5 +1,8 @@
 @import "reset.scss";
 @import "helpers.scss";
+@import "mixin.scss";
+
+$yellow: #FDEA00;
 
 .main-header {
     .navbar {
@@ -9,34 +12,75 @@
         }
         .collapse,
         .collapsing {
-            .navbar-nav {
-                .nav-link {
-                    padding: 25px 10px;
-                    margin: 0 1.2rem;
-                    &:hover {
-                        background-color: #FDEA00;
-                    }
-                }
-                .nav-link__active {
-                    background-color: #FDEA00;
+            .nav-link {
+                padding: 25px 10px;
+                margin: 0 1.2rem;
+                &:hover {
+                    background-color: $yellow;
                 }
             }
+            .nav-link__active {
+                background-color: $yellow;
+            }
+
         }
     }
     .header-slider {
-        .header-slider__single-slide {
-            .header-slider__single-slide--background {
-                background-image: url(../img/slider-background.jpg);
-                background-position: center;
-                background-size: cover;
-                .first {
-                    border: 10px solid green;
-                    height: 500px;
-
+        .single-slide {
+            background-image: url(../img/slider-background.jpg);
+            background-position: left;
+            background-size: cover;
+            min-height: 700px;
+            position: relative;
+            .left-side {
+                position: absolute;
+                left: 10%;
+                top: 95px;
+                min-height: 700px;
+                .left-side__h1 {
+                    mark {
+                        text-transform: uppercase;
+                        background-color: $yellow;
+                        line-height: 1.45;
+                        font-size: 65px;
+                        font-weight: 400;
+                        letter-spacing: 7px;
+                        padding: 0;
+                    }
                 }
-                .second {
-                    border: 10px solid black;
-                    height: 500px;
+                .left-side__txt {
+                    text-align: left;
+                    width: 35%;
+                    mark {
+                        background-color: #3F3F44;
+                        line-height: 1.35;
+                        font-size: 20px;
+                        color: white;
+
+                    }
+                }
+                .left-side__button {
+                    background-color: #000;
+                    border: none;
+                    border-bottom: 3px solid #FFEB00;
+                    color: white;
+                    padding: 1px 30px;
+                    font-size: 20px;
+                    @include centerX;
+                }
+            }
+            .right-side {
+                padding-top: 30px;
+                position: absolute;
+                left: 50%;
+                text-align: left;
+                .cell-image {
+                    img{
+                        height: 140px;
+                    }
+                }
+                .row-2, .row-4{
+                    margin-left: 162px;
                 }
             }
         }
