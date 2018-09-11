@@ -94,6 +94,21 @@ input:focus {
 .mr-5rem {
   margin-right: 5rem !important; }
 
+.px-50 {
+  padding: 0 50px !important; }
+
+.px-75 {
+  padding: 0 75px !important; }
+
+.px-100 {
+  padding: 0 100px !important; }
+
+.px-150 {
+  padding: 0 150px !important; }
+
+.px-1px {
+  padding: 0 3px !important; }
+
 .main-header .navbar {
   background-color: #F6F6F6; }
   .main-header .navbar .navbar-brand {
@@ -114,11 +129,12 @@ input:focus {
   background-position: left;
   background-size: cover;
   min-height: 700px;
-  position: relative; }
+  position: relative;
+  width: 100%; }
   .main-header .header-slider .single-slide .left-side {
     position: absolute;
     left: 10%;
-    top: 95px;
+    margin-top: 95px;
     min-height: 700px; }
     .main-header .header-slider .single-slide .left-side .left-side__h1 mark {
       text-transform: uppercase;
@@ -130,20 +146,21 @@ input:focus {
       padding: 0; }
     .main-header .header-slider .single-slide .left-side .left-side__txt {
       text-align: left;
-      width: 35%; }
+      width: 45%; }
       .main-header .header-slider .single-slide .left-side .left-side__txt mark {
         background-color: #3F3F44;
-        line-height: 1.35;
+        line-height: 1.9;
         font-size: 20px;
         color: white; }
     .main-header .header-slider .single-slide .left-side .left-side__button {
       background-color: #000;
       border: none;
-      border-bottom: 3px solid #FFEB00;
+      border-bottom: 3px solid #FDEA00;
       color: white;
       padding: 1px 30px;
+      margin-top: 50px;
       font-size: 20px;
-      position: relative;
+      position: absolute;
       left: 50%;
       transform: translateX(-50%);
       -webkit-transform: translateX(-50%);
@@ -152,10 +169,176 @@ input:focus {
       -o-transform: translateX(-50%); }
   .main-header .header-slider .single-slide .right-side {
     padding-top: 30px;
+    padding-bottom: 80px;
     position: absolute;
     left: 50%;
     text-align: left; }
     .main-header .header-slider .single-slide .right-side .cell-image img {
       height: 140px; }
-    .main-header .header-slider .single-slide .right-side .row-2, .main-header .header-slider .single-slide .right-side .row-4 {
+    .main-header .header-slider .single-slide .right-side .row-2,
+    .main-header .header-slider .single-slide .right-side .row-4 {
       margin-left: 162px; }
+
+.specialisation {
+  margin-bottom: 60px; }
+  .specialisation .specialisation-header {
+    margin: 40px 20px 10px 20px; }
+    .specialisation .specialisation-header .specialisation-header--h1 {
+      text-align: center;
+      color: #3F3F44;
+      font-size: 1.7rem;
+      text-transform: uppercase; }
+    .specialisation .specialisation-header .specialisation-header--descr {
+      text-align: center;
+      color: #3F3F44;
+      font-size: 1.4rem; }
+  .specialisation .specialisation-element {
+    padding: 30px; }
+    .specialisation .specialisation-element .specialisation-element__content {
+      height: 250px;
+      position: relative; }
+      .specialisation .specialisation-element .specialisation-element__content .up {
+        top: 0;
+        height: 70%;
+        width: 100%;
+        background-color: #FDEA00;
+        position: absolute;
+        z-index: -1; }
+        .specialisation .specialisation-element .specialisation-element__content .up .up--img {
+          height: 80%;
+          padding: 10px;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%); }
+        .specialisation .specialisation-element .specialisation-element__content .up .up--header {
+          text-align: center;
+          text-transform: uppercase;
+          font-size: 1.2rem;
+          font-weight: 400;
+          bottom: 0%;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%); }
+      .specialisation .specialisation-element .specialisation-element__content .down {
+        position: absolute;
+        height: 30%;
+        width: 100%;
+        top: 70%;
+        background-color: #3F3F44;
+        z-index: -1; }
+        .specialisation .specialisation-element .specialisation-element__content .down p {
+          color: white;
+          text-align: center;
+          font-size: 0.9rem;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%); }
+      .specialisation .specialisation-element .specialisation-element__content .up-hover {
+        position: absolute;
+        top: 0;
+        height: 70%;
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+        opacity: 0;
+        background-position: center;
+        background-size: cover; }
+        .specialisation .specialisation-element .specialisation-element__content .up-hover .up-hover--img {
+          width: 100%;
+          height: 100%; }
+      .specialisation .specialisation-element .specialisation-element__content .down-hover {
+        position: absolute;
+        top: 70%;
+        height: 30%;
+        width: 100%;
+        background-color: #3F3F44;
+        transition: all 0.5s ease-in-out;
+        opacity: 0; }
+        .specialisation .specialisation-element .specialisation-element__content .down-hover .down-hover--header {
+          color: white;
+          font-size: 1.1rem;
+          font-weight: 300;
+          text-align: center;
+          text-transform: uppercase;
+          line-height: 1.2;
+          margin: 8px;
+          text-align: left; }
+        .specialisation .specialisation-element .specialisation-element__content .down-hover .down-hover--footer {
+          color: white;
+          font-size: 0.6rem;
+          text-align: right;
+          margin-right: 15px; }
+          .specialisation .specialisation-element .specialisation-element__content .down-hover .down-hover--footer .down-hover--footer__yellow {
+            color: yellow; }
+      .specialisation .specialisation-element .specialisation-element__content .arrow-up {
+        position: absolute;
+        top: 66%;
+        left: 80%;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #3F3F44;
+        transform: translateY(10px);
+        transition: all 0.5s ease-in-out 0.2s; }
+      .specialisation .specialisation-element .specialisation-element__content:hover .up-hover {
+        opacity: 1; }
+      .specialisation .specialisation-element .specialisation-element__content:hover .down-hover {
+        opacity: 1; }
+      .specialisation .specialisation-element .specialisation-element__content:hover .arrow-up {
+        transform: translateY(0px); }
+
+.section-header .section-header--line {
+  margin: 15px 0;
+  height: 1px;
+  width: 100%;
+  background-color: #CBCBCB;
+  display: inline-block; }
+
+.section-header .section-header--h1 {
+  width: 180px;
+  height: 31px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  background-color: #fff; }
+  .section-header .section-header--h1 .text {
+    line-height: 31px;
+    margin: 0 30px;
+    width: 120px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #3F3F44;
+    color: #FDEA00; }
+
+.section-header .section-header--desc {
+  color: #3F3F44;
+  font-size: 14px;
+  text-align: center;
+  margin: 20px;
+  font-weight: 500; }
+
+.work {
+  padding-bottom: 60px; }
+  .work .work-gallery .pic-1 {
+    height: auto;
+    width: 100%;
+    background-color: gray;
+    float: left;
+    margin: 2px; }

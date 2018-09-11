@@ -1,4 +1,5 @@
 @mixin centerY() {
+    position: relative;
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -8,7 +9,7 @@
 }
 
 @mixin centerX() {
-    position: relative;
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
@@ -21,4 +22,12 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+@mixin centerReset() {
+    position: static;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
 }

@@ -2,7 +2,9 @@
 @import "helpers.scss";
 @import "mixin.scss";
 
+
 $yellow: #FDEA00;
+$gray: #3F3F44;
 
 .main-header {
     .navbar {
@@ -32,10 +34,11 @@ $yellow: #FDEA00;
             background-size: cover;
             min-height: 700px;
             position: relative;
+            width: 100%;
             .left-side {
                 position: absolute;
                 left: 10%;
-                top: 95px;
+                margin-top: 95px;
                 min-height: 700px;
                 .left-side__h1 {
                     mark {
@@ -50,10 +53,10 @@ $yellow: #FDEA00;
                 }
                 .left-side__txt {
                     text-align: left;
-                    width: 35%;
+                    width: 45%;
                     mark {
                         background-color: #3F3F44;
-                        line-height: 1.35;
+                        line-height: 1.9;
                         font-size: 20px;
                         color: white;
 
@@ -62,27 +65,199 @@ $yellow: #FDEA00;
                 .left-side__button {
                     background-color: #000;
                     border: none;
-                    border-bottom: 3px solid #FFEB00;
+                    border-bottom: 3px solid $yellow;
                     color: white;
                     padding: 1px 30px;
+                    margin-top: 50px;
                     font-size: 20px;
                     @include centerX;
                 }
             }
             .right-side {
                 padding-top: 30px;
+                padding-bottom: 80px;
                 position: absolute;
                 left: 50%;
                 text-align: left;
                 .cell-image {
-                    img{
+                    img {
                         height: 140px;
                     }
                 }
-                .row-2, .row-4{
+                .row-2,
+                .row-4 {
                     margin-left: 162px;
                 }
             }
+        }
+    }
+}
+
+.specialisation {
+    margin-bottom: 60px;
+    .specialisation-header {
+        margin: 40px 20px 10px 20px;
+        .specialisation-header--h1 {
+            text-align: center;
+            color: $gray;
+            font-size: 1.7rem;
+            text-transform: uppercase;
+        }
+        .specialisation-header--descr {
+            text-align: center;
+            color: $gray;
+            font-size: 1.4rem;
+        }
+    }
+    .specialisation-element {
+        padding: 30px;
+        .specialisation-element__content {
+            height: 250px;
+            position: relative;
+            .up {
+                top: 0;
+                height: 70%;
+                width: 100%;
+                background-color: $yellow;
+                position: absolute;
+                z-index: -1;
+                .up--img {
+                    height: 80%;
+                    padding: 10px;
+                    @include centerX;
+                }
+                .up--header {
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    bottom: 0%;
+                    @include centerX;
+                }
+            }
+            .down {
+                position: absolute;
+                height: 30%;
+                width: 100%;
+                top: 70%;
+                background-color: $gray;
+                z-index: -1;
+                p {
+                    color: white;
+                    text-align: center;
+                    font-size: 0.9rem;
+                    @include centerY;
+                }
+            }
+            .up-hover {
+                position: absolute;
+                top: 0;
+                height: 70%;
+                width: 100%;
+                transition: all 0.5s ease-in-out;
+                opacity: 0;
+                background-position: center;
+                background-size: cover;
+                .up-hover--img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .down-hover {
+                position: absolute;
+                top: 70%;
+                height: 30%;
+                width: 100%;
+                background-color: $gray;
+                transition: all 0.5s ease-in-out;
+                opacity: 0;
+                .down-hover--header {
+                    color: white;
+                    font-size: 1.1rem;
+                    font-weight: 300;
+                    text-align: center;
+                    text-transform: uppercase;
+                    line-height: 1.2;
+                    margin: 8px;
+                    text-align: left;
+                }
+                .down-hover--footer {
+                    color: white;
+                    font-size: 0.6rem;
+                    text-align: right;
+                    margin-right: 15px;
+                    .down-hover--footer__yellow {
+                        color: yellow;
+                    }
+                }
+            }
+            .arrow-up {
+                position: absolute;
+                top: 66%;
+                left: 80%;
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid $gray;
+                transform: translateY(10px);
+                transition: all 0.5s ease-in-out 0.2s;
+            }
+            &:hover .up-hover {
+                opacity: 1;
+            }
+            &:hover .down-hover {
+                opacity: 1;
+            }
+            &:hover .arrow-up {
+                transform: translateY(0px);
+            }
+        }
+    }
+}
+
+.section-header {
+    .section-header--line {
+        margin: 15px 0;
+        height: 1px;
+        width: 100%;
+        background-color: #CBCBCB;
+        display: inline-block;
+    }
+    .section-header--h1 {
+        width: 180px;
+        height: 31px;
+        @include centerX;
+        background-color: #fff;
+        .text {
+            line-height: 31px;
+            margin: 0 30px;
+            width: 120px;
+            font-size: 14px;
+            text-align: center;
+            text-transform: uppercase;
+            background-color: $gray;
+            color: $yellow;
+        }
+    }
+    .section-header--desc {
+        color: $gray;
+        font-size: 14px;
+        text-align: center;
+        margin: 20px;
+        font-weight: 500;
+    }
+}
+
+.work {
+    padding-bottom: 60px;
+    .work-gallery {
+        .pic-1 {
+            height: auto;
+            width: 100%;
+            background-color: gray;
+            float: left;
+            margin: 2px;
         }
     }
 }
