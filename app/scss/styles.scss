@@ -5,8 +5,45 @@
 
 $yellow: #FDEA00;
 $gray: #3F3F44;
+$bgwhite: #F6F6F6;
 
+
+//global
+.section-header {
+    .section-header--line {
+        margin: 15px 0;
+        height: 1px;
+        width: 100%;
+        background-color: #CBCBCB;
+        display: inline-block;
+    }
+    .section-header--h1 {
+        width: 180px;
+        height: 31px;
+        @include centerX;
+        .text {
+            line-height: 31px;
+            margin: 0 30px;
+            width: 120px;
+            font-size: 14px;
+            text-align: center;
+            text-transform: uppercase;
+            background-color: $gray;
+            color: $yellow;
+        }
+    }
+    .section-header--desc {
+        color: $gray;
+        font-size: 14px;
+        text-align: center;
+        margin: 20px;
+        font-weight: 500;
+    }
+}
+
+//rest
 .main-header {
+    background-color: $bgwhite;
     .navbar {
         background-color: #F6F6F6;
         .navbar-brand {
@@ -94,9 +131,10 @@ $gray: #3F3F44;
 }
 
 .specialisation {
-    margin-bottom: 60px;
+    padding-bottom: 60px;
+    background-color: $bgwhite;
     .specialisation-header {
-        margin: 40px 20px 10px 20px;
+        padding: 40px 20px 10px 20px;
         .specialisation-header--h1 {
             text-align: center;
             color: $gray;
@@ -120,7 +158,6 @@ $gray: #3F3F44;
                 width: 100%;
                 background-color: $yellow;
                 position: absolute;
-                z-index: -1;
                 .up--img {
                     height: 80%;
                     padding: 10px;
@@ -141,7 +178,6 @@ $gray: #3F3F44;
                 width: 100%;
                 top: 70%;
                 background-color: $gray;
-                z-index: -1;
                 p {
                     color: white;
                     text-align: center;
@@ -216,48 +252,39 @@ $gray: #3F3F44;
     }
 }
 
-.section-header {
-    .section-header--line {
-        margin: 15px 0;
-        height: 1px;
-        width: 100%;
-        background-color: #CBCBCB;
-        display: inline-block;
-    }
-    .section-header--h1 {
-        width: 180px;
-        height: 31px;
-        @include centerX;
-        background-color: #fff;
-        .text {
-            line-height: 31px;
-            margin: 0 30px;
-            width: 120px;
-            font-size: 14px;
-            text-align: center;
-            text-transform: uppercase;
-            background-color: $gray;
-            color: $yellow;
-        }
-    }
-    .section-header--desc {
-        color: $gray;
-        font-size: 14px;
-        text-align: center;
-        margin: 20px;
-        font-weight: 500;
-    }
-}
+
 
 .work {
+    background-color: $bgwhite;
     padding-bottom: 60px;
     .work-gallery {
         .pic-1 {
             height: auto;
             width: 100%;
-            background-color: gray;
             float: left;
             margin: 2px;
+        }
+    }
+}
+
+.clients {
+    background-color: $bgwhite;
+    .clients-slider {
+        height: 100px;
+        .single-slide {
+            position: relative;
+            height: 63px;
+            .client-container {
+                width: 140px;
+                height: 100%;
+                @include centerXY;
+                background-color: #fff;
+                .client-image {
+                    @include centerXY;
+                    width: 100px;
+                    height: auto;
+                }
+            }
         }
     }
 }
