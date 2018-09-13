@@ -5,7 +5,8 @@
 
 $yellow: #FDEA00;
 $gray: #3F3F44;
-$bgwhite: #F6F6F6;
+$dark-gray: #3F3F44;
+$bright-white: #F6F6F6;
 
 
 //global
@@ -43,7 +44,7 @@ $bgwhite: #F6F6F6;
 
 //rest
 .main-header {
-    background-color: $bgwhite;
+    background-color: $bright-white;
     .navbar {
         background-color: #F6F6F6;
         .navbar-brand {
@@ -132,7 +133,7 @@ $bgwhite: #F6F6F6;
 
 .specialisation {
     padding-bottom: 60px;
-    background-color: $bgwhite;
+    background-color: $bright-white;
     .specialisation-header {
         padding: 40px 20px 10px 20px;
         .specialisation-header--h1 {
@@ -255,7 +256,7 @@ $bgwhite: #F6F6F6;
 
 
 .work {
-    background-color: $bgwhite;
+    background-color: $bright-white;
     padding-bottom: 60px;
     .work-gallery {
         .pic-1 {
@@ -268,7 +269,7 @@ $bgwhite: #F6F6F6;
 }
 
 .clients {
-    background-color: $bgwhite;
+    background-color: $bright-white;
     .clients-slider {
         height: 100px;
         .single-slide {
@@ -285,6 +286,37 @@ $bgwhite: #F6F6F6;
                     height: auto;
                 }
             }
+        }
+    }
+}
+
+.info {
+    background-color: $dark-gray;
+    color: white;
+//    padding-top: 30px;
+    .column {
+        position: relative;
+        .column-container {
+            width: 100%;
+            padding-left: 15%;
+            height: 400px;
+//            background-color: gray;
+            .info--sub-header {
+                @include infoSubHeader;
+            }
+            .info--button{
+                line-height: 37px;
+                text-align: center;
+                display: block;
+                width: 121px;
+                border-bottom: 2px solid #FFEB00;
+                background-color: black;
+                color: white;
+            }
+            
+        }
+        .sub-column {
+            height: 400px;
         }
     }
 }

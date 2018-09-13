@@ -36,3 +36,10 @@
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
 }
+@mixin infoSubHeader(){
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}

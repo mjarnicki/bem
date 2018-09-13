@@ -4,7 +4,7 @@
         $('.header-slider').slick({
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 50000,
+            autoplaySpeed: 5000,
             arrows: false,
             dots: true,
             adaptiveHeight: true
