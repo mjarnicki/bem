@@ -1,6 +1,8 @@
 @media (max-width: 1170px) {
   .main-header .header-slider .single-slide .left-side .left-side__txt {
-    width: 50%; } }
+    width: 50%; }
+  .info .column .column-container .info--tweet .tweet--icon .fa-twitter {
+    font-size: 23px; } }
 
 @media (max-width: 1024px) {
   .main-header .header-slider .single-slide .left-side .left-side__txt {
@@ -8,6 +10,11 @@
   .main-header .header-slider .single-slide .right-side .cell-image {
     margin-left: 0; }
     .main-header .header-slider .single-slide .right-side .cell-image img {
+      margin: 0 auto; }
+  .info .column {
+    position: relative; }
+    .info .column .column-container {
+      padding-left: 0;
       margin: 0 auto; } }
 
 @media (max-width: 992px) {
