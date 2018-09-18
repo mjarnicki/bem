@@ -32,7 +32,9 @@
       .main-header .header-slider .single-slide .right-side .cell-image {
         margin-left: 0; }
         .main-header .header-slider .single-slide .right-side .cell-image img {
-          margin: 0 auto; } }
+          margin: 0 auto; }
+  .contact--minus-margin {
+    margin-top: -110px; } }
 
 @media (max-width: 768px) {
   .main-header .header-slider .single-slide {
@@ -58,4 +60,6 @@
       height: auto; }
   .main-header .header-slider .single-slide .right-side .cell-image:last-child img {
     width: 33%;
-    height: auto; } }
+    height: auto; }
+  .contact--minus-margin {
+    margin-top: 0; } }

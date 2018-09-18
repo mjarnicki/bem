@@ -119,6 +119,9 @@ input:focus {
   -o-transform: rotate(45deg);
   transform: rotate(45deg); }
 
+.pr-12-perc {
+  padding-right: 12% !important; }
+
 .section-header .section-header--line {
   margin: 15px 0;
   height: 1px;
@@ -386,6 +389,15 @@ input:focus {
 .info {
   background-color: #3F3F44;
   color: white; }
+  .info .info--icon {
+    width: 30px;
+    line-height: 30px;
+    background-color: black;
+    display: inline-block;
+    text-align: center;
+    color: white; }
+    .info .info--icon:not(.nohover):hover {
+      color: #FDEA00; }
   .info .column .column-container {
     width: 100%;
     padding-left: 12%; }
@@ -427,15 +439,25 @@ input:focus {
           color: #FDEA00;
           margin-top: 4px;
           margin-bottom: 10px; }
-    .info .column .column-container .info--social-icon {
-      width: 30px;
-      line-height: 30px;
-      background-color: black;
+    .info .column .column-container .info--social-container {
+      display: inline-block; }
+    .info .column .column-container .sub-column .contact--section {
+      margin: 20px 0; }
+      .info .column .column-container .sub-column .contact--section .contact--text {
+        display: inline-block;
+        width: 65%;
+        vertical-align: top;
+        margin: 4px 0 0 10px; }
+    .info .column .column-container .sub-column .follow--text {
       display: inline-block;
-      text-align: center;
-      color: white; }
-      .info .column .column-container .info--social-icon:hover {
-        color: #FDEA00; }
+      width: 75%; }
+    .info .column .column-container .sub-column .follow--input {
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid #FDEA00;
+      color: white;
+      margin-top: 10px;
+      width: 50%; }
 
 .footer {
   background-color: black; }

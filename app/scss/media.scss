@@ -91,6 +91,9 @@
             }
         }
     }
+        .contact--minus-margin{
+        margin-top: -110px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -110,6 +113,7 @@
             }
         }
     }
+
 }
 
 @media (max-width: 540px) {
@@ -134,5 +138,8 @@
                 }
             }
         }
+    }
+    .contact--minus-margin{
+        margin-top: 0;
     }
 }
